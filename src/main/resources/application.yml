@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    stream:
+      bindings:
+        nahyun:
+          destination: nahyun
+          content-type: application/json
+
+        wordCountChannel:
+          destination: word_count
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: localhost:29092,localhost:39092,localhost:49092
